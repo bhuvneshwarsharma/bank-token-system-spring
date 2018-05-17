@@ -45,6 +45,6 @@ When application is up then access url 'localhost:8080/bank/dummyData' which wil
 
 '/token' - 'POST' - it will generate token for customer if exist with given phone no. Attributes - phoneNumber, serviceType (like deposit, withdraw, account, enquiery)
 
-'/token' - 'PUT' - It will process token. Attributes like counterName,branchName
+'/token' - 'PUT' - It will process token. Attribute need to pass counterName
 
 
