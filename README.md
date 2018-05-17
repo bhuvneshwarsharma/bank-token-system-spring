@@ -1,4 +1,3 @@
-# bank-token-system
 # Banking Token System
 This service to manage customer tokens and to improve customer experience.
 
