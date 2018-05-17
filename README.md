@@ -37,13 +37,13 @@ When application is up then access url 'localhost:8080/bank/dummyData' which wil
 
 '/customer/{phoneNumber}'  - 'GET' - It will return customer details
 
-'/customer' - 'POST' - It will create customer in db. Need to send attributes like name,phoneNumber,address,serviceType (service type can be either 'premium' or 'regular')
+'/customer' - 'POST' - It will create customer in db. Need to send attributes like name,phoneNumber,address,serviceType in request body (service type can be either 'premium' or 'regular')
 
 '/serviceCounter' - 'GET' - Return all service counters list
 
 '/serviceCounter/{serviceType}/tokens' - 'GET' - return all tokens for service type (like deposit, withdraw, account, enquiery)
 
-'/token' - 'POST' - it will generate token for customer if exist with given phone no. Attributes - phoneNumber, serviceType (like deposit, withdraw, account, enquiery)
+'/token' - 'POST' - it will generate token for customer if exist with given phone no. Attributes - phoneNumber, serviceType (like deposit, withdraw, account, enquiery) in request body
 
-'/token' - 'PUT' - It will process token. Attribute need to pass counterName
+'/token' - 'PUT' - It will process token. Attribute need to pass counterName in request body
 
