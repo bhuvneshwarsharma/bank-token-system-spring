@@ -8,7 +8,9 @@ import java.util.List;
 /**
  * Created by bhuvneshwars on 16/5/18.
  */
-public interface ITestData {
+public interface TokenService {
 
-   public boolean createBankDummyData();
+    String generateToken(String phoneNumber, String serviceType);
+
+    String processToken(String counterName);
 }

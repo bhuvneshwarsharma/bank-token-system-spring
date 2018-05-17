@@ -3,7 +3,7 @@ package com.bank.service.impl;
 import com.bank.constants.EntityType;
 import com.bank.entity.Customer;
 import com.bank.repo.CustomerRepo;
-import com.bank.service.ICustomerService;
+import com.bank.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ import java.util.List;
  * Created by bhuvneshwars on 16/5/18.
  */
 @Service
-public class CustomerServiceImpl implements ICustomerService{
+public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
     CustomerRepo customerRepo;

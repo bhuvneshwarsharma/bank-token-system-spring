@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by bhuvneshwars on 16/5/18.
  */
-public interface IServiceCounter {
+public interface ServiceCounterService {
 
     List<ServiceCounter> getServiceCounterList();
     List<CustomerToken> getTokensForServiceCounter(String serviceType);

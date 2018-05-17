@@ -8,7 +8,7 @@ import com.bank.entity.ServiceCounter;
 import com.bank.repo.BankRepo;
 import com.bank.repo.BranchRepo;
 import com.bank.repo.ServiceCounterRepo;
-import com.bank.service.ITestData;
+import com.bank.service.TestDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +19,7 @@ import java.util.List;
  */
 
 @Service
-public class TestDataImpl implements ITestData {
+public class TestDataServiceImpl implements TestDataService {
 
     @Autowired
     BankRepo bankRepo;

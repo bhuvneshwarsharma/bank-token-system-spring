@@ -7,7 +7,7 @@ import com.bank.entity.ServiceCounter;
 import com.bank.repo.CustomerRepo;
 import com.bank.repo.CustomerTokenRepo;
 import com.bank.repo.ServiceCounterRepo;
-import com.bank.service.ITokenService;
+import com.bank.service.TokenService;
 import com.bank.token.services.processor.TokenProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ import java.util.Date;
  * Created by bhuvneshwars on 16/5/18.
  */
 @Service
-public class TokenServiceImpl implements ITokenService{
+public class TokenServiceImpl implements TokenService {
 
     @Autowired
     CustomerRepo customerRepo;

@@ -1,6 +1,6 @@
 package com.bank.controller;
 
-import com.bank.service.impl.TestDataImpl;
+import com.bank.service.impl.TestDataServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 public class TestDataController {
 
     @Autowired
-    TestDataImpl testDataImpl;
+    TestDataServiceImpl testDataImpl;
 
     @RequestMapping("/dummyData")
     public String createBankDummyData() {

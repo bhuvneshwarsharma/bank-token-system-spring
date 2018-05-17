@@ -4,6 +4,8 @@ import com.bank.service.impl.TokenServiceImpl;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.rabbitmq.tools.json.JSONReader;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +14,8 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 public class TokenController {
+
+    private static final Logger logger = LoggerFactory.getLogger(TokenController.class);
 
     @Autowired
     TokenServiceImpl tokenService;
@@ -29,6 +33,7 @@ public class TokenController {
 
         } catch(Exception e) {
 
+            logger.error("Facing issue while creating new token : "+e.getMessage());
             return "Facing issue while creating new token";
         }
     }
@@ -45,6 +50,7 @@ public class TokenController {
 
         } catch(Exception e) {
 
+            logger.error("Facing issue while processing token : "+e.getMessage());
             return "Facing issue while processing token";
         }
     }

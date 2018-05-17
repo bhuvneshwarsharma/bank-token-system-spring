@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by bhuvneshwars on 16/5/18.
  */
-public interface ICustomerService {
+public interface CustomerService {
 
     Customer getCustomer(String phoneNumber);
 
