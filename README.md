@@ -32,7 +32,6 @@ When application is up then access url 'localhost:8080/bank/dummyData' which wil
 
 
 ### APIs to use
-'URL End Point' - 'Method Type' - 'Query Param' - 'Description'
 
 '/dummyData' - 'GET' : It will create dummy data for application to work
 
