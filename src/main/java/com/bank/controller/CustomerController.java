@@ -2,9 +2,11 @@ package com.bank.controller;
 
 import com.bank.entity.Customer;
 import com.bank.service.impl.CustomerServiceImpl;
+import io.swagger.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,7 +22,30 @@ public class CustomerController {
     @Autowired
     CustomerServiceImpl customerService;
 
-    @RequestMapping(value = "/customer/{phoneNumber}", method = RequestMethod.GET)
+//    @ApiOperation(
+//            value = "Get Customer Details",
+//            nickname = "customer/{phoneNumber}"
+////            produces = "application/json",
+////            consumes = "application/json",
+////            httpMethod = "GET"
+//    )
+//    @ApiResponses(value = {
+//            @ApiResponse(code = 404,
+//                    message = "Customer is not registered for this phoneNumber"
+//            ),
+//            @ApiResponse(code = 500,
+//                    message = "Facing issue while fetching customer details"
+//            )
+//    })
+//    @ApiImplicitParams(value = {
+//            @ApiImplicitParam(name = "phoneNumber",
+//                    paramType = "path",
+//                    required = true,
+//                    value = "Customer's Phone Number",
+//                    dataType = "string"
+//            )
+//    })
+    @RequestMapping(value = "/customer/{phoneNumber}", method = RequestMethod.GET, produces = "application/json")
     Customer getCustomer(@PathVariable String phoneNumber) {
 
         Customer customer = null;

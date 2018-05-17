@@ -13,7 +13,7 @@ public class TestDataController {
     @Autowired
     TestDataServiceImpl testDataImpl;
 
-    @RequestMapping("/dummyData")
+    @RequestMapping(value = "/dummyData", method = RequestMethod.GET)
     public String createBankDummyData() {
 
         try{

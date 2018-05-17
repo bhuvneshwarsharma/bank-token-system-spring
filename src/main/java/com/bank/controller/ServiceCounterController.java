@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -23,7 +24,7 @@ public class ServiceCounterController {
     @Autowired
     ServiceCounterServicecImpl serviceCounter;
 
-    @RequestMapping(value = "/serviceCounter")
+    @RequestMapping(value = "/serviceCounter", method = RequestMethod.GET)
     List<ServiceCounter> getServiceCounterList() {
 
         List<ServiceCounter> serviceCounterList = null;
@@ -37,7 +38,7 @@ public class ServiceCounterController {
         return serviceCounterList;
     }
 
-    @RequestMapping(value = "/serviceCounter/{serviceType}/tokens")
+    @RequestMapping(value = "/serviceCounter/{serviceType}/tokens", method = RequestMethod.GET)
     List<CustomerToken> getTokensForServiceCounter(@PathVariable String serviceType) {
 
         List<CustomerToken> tokens = null;

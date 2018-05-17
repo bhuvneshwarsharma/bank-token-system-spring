@@ -8,7 +8,7 @@ This service to manage customer tokens and to improve customer experience.
 In order to get started you need the following:
 
 1. JDK 7.0 or later.
-2. Maven 2 or later
+2. Maven 3.0 or later
 3. Spring Boot
 4. Spring Data JPA
 3. mysql
@@ -30,6 +30,8 @@ When application is up then access url 'localhost:8080/bank/dummyData' which wil
 - Click `Next`
 - Click `Finish`
 
+
+#### Once application is up, then we can see swagger ui for application for all modules (controllers) and we can try out all apis with their responses.
 
 ### APIs to use
 

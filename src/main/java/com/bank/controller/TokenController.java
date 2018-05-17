@@ -20,7 +20,7 @@ public class TokenController {
     @Autowired
     TokenServiceImpl tokenService;
 
-    @PostMapping(value = "/token")
+    @RequestMapping(value = "/token", method = RequestMethod.POST)
     public String generateToken(@RequestBody String json) {
 
         try {
@@ -38,7 +38,7 @@ public class TokenController {
         }
     }
 
-    @PutMapping(value = "/token")
+    @RequestMapping(value = "/token", method = RequestMethod.PUT)
     public String processToken(@RequestBody String json) {
 
         try {
