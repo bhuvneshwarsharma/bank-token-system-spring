@@ -47,4 +47,3 @@ When application is up then access url 'localhost:8080/bank/dummyData' which wil
 
 '/token' - 'PUT' - It will process token. Attribute need to pass counterName
 
-
