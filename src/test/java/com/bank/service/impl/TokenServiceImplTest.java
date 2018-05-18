@@ -1,8 +1,7 @@
 package com.bank.service.impl;
 
 import com.bank.repo.CustomerTokenRepo;
-import com.bank.service.CustomerService;
-import com.bank.service.TokenService;
+import com.bank.TokenService;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
@@ -30,5 +29,5 @@ public class TokenServiceImplTest {
     @MockBean
     private CustomerTokenRepo customerTokenRepo;
 
-    
+
 }

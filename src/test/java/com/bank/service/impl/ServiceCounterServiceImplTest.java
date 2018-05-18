@@ -1,21 +1,20 @@
 package com.bank.service.impl;
 
+import com.bank.service.BankTokenSystemApplicationTests;
 import com.bank.constants.EntityType;
 import com.bank.constants.ServiceType;
 import com.bank.entity.CustomerToken;
 import com.bank.entity.ServiceCounter;
 import com.bank.repo.CustomerTokenRepo;
 import com.bank.repo.ServiceCounterRepo;
-import com.bank.service.ServiceCounterService;
+import com.bank.ServiceCounterService;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -24,8 +23,7 @@ import java.util.List;
 /**
  * Created by bhuvneshwars on 18/5/18.
  */
-@RunWith(SpringRunner.class)
-public class ServiceCounterServiceImplTest {
+public class ServiceCounterServiceImplTest extends BankTokenSystemApplicationTests{
 
     @TestConfiguration
     static class ServiceCounterServiceImplTestContextConfiguration {
