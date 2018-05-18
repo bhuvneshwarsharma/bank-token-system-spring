@@ -31,7 +31,8 @@ When application is up then access url 'localhost:8080/bank/dummyData' which wil
 - Click `Finish`
 
 
-#### Once application is up, then we can see swagger ui for application for all modules (controllers) and we can try out all apis with their responses.
+##### Once application is up, then we can see swagger ui for application for all modules (controllers) and we can try out all apis with their responses.
+#### Swagger API : `http://localhost:8080/bank/swagger-ui.html`
 
 ### APIs to use
 
