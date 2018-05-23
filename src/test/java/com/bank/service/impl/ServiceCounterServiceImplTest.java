@@ -7,7 +7,7 @@ import com.bank.entity.CustomerToken;
 import com.bank.entity.ServiceCounter;
 import com.bank.repo.CustomerTokenRepo;
 import com.bank.repo.ServiceCounterRepo;
-import com.bank.ServiceCounterService;
+import com.bank.service.ServiceCounterService;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;

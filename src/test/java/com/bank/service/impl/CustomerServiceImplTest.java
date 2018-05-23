@@ -1,10 +1,11 @@
 package com.bank.service.impl;
 
+import com.bank.constants.EntityType;
 import com.bank.service.BankTokenSystemApplicationTests;
 import com.bank.constants.ServiceType;
 import com.bank.entity.Customer;
 import com.bank.repo.CustomerRepo;
-import com.bank.CustomerService;
+import com.bank.service.CustomerService;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
@@ -48,11 +49,11 @@ public class CustomerServiceImplTest extends BankTokenSystemApplicationTests{
     public void setUp() {
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
 
-        Customer customer1 = new Customer("Bhuvi", "7897952579", "Hyderabad", ServiceType.DEPOSIT.toString());
+        Customer customer1 = new Customer("Bhuvi", "7897952579", "Hyderabad", EntityType.PREMIUM.toString());
         Mockito.when(customerRepo.findByPhoneNumber(customer1.getPhoneNumber()))
                 .thenReturn(customer1);
 
-        Customer customer2 = new Customer("Alex", "6782342434", "Hyderabad", ServiceType.DEPOSIT.toString());
+        Customer customer2 = new Customer("Alex", "6782342434", "Hyderabad", EntityType.REGULAR.toString());
         List<Customer> customerList = new ArrayList<Customer>(){{add(customer1); add(customer2);}};
 
         Mockito.when(customerRepo.findAll())

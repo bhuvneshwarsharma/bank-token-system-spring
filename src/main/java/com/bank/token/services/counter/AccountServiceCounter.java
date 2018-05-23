@@ -1,5 +1,6 @@
 package com.bank.token.services.counter;
 
+import com.bank.constants.EntityType;
 import com.bank.constants.ServiceType;
 import com.bank.entity.CustomerToken;
 import com.bank.token.services.processor.TokenProcessor;
@@ -54,7 +55,18 @@ public class AccountServiceCounter implements IBankServiceCounter {
         return token;
     }
 
-    public void doSomething() {
+    @Override
+    public int pendingTokens() {
 
+        return getTokenCount(EntityType.PREMIUM.toString()) + getTokenCount(EntityType.REGULAR.toString());
+    }
+
+    public int getTokenCount(String counterType) {
+
+        int noOfTokens = 0;
+        Queue queue = tokenTaskList.get(counterType);
+        if(queue != null)
+            noOfTokens = queue.size();
+        return noOfTokens;
     }
 }

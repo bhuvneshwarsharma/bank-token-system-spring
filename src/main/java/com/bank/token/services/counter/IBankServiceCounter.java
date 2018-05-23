@@ -11,5 +11,5 @@ public interface IBankServiceCounter {
 
     public CustomerToken processToken(String counterType);
 
-    public void doSomething();
+    public int pendingTokens();
 }
